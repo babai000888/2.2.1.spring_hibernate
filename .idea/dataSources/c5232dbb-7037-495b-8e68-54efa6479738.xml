@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.23">
+    <root id="1">
+      <ServerVersion>8.0.0</ServerVersion>
+      <Grants>|root||root|localhost|ALTER|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root|localhost|CREATE|G
+|root||root|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE USER|G
+|root||root|localhost|CREATE VIEW|G
+|root||root|localhost|DELETE|G
+|root||root|localhost|DROP|G
+|root||root|localhost|DROP ROLE|G
+|root||root|localhost|EVENT|G
+|root||root|localhost|EXECUTE|G
+|root||root|localhost|FILE|G
+|root||root|localhost|INDEX|G
+|root||root|localhost|INSERT|G
+|root||root|localhost|LOCK TABLES|G
+|root||root|localhost|PROCESS|G
+|root||root|localhost|REFERENCES|G
+|root||root|localhost|RELOAD|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||root|localhost|SELECT|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW VIEW|G
+|root||root|localhost|SHUTDOWN|G
+|root||root|localhost|SUPER|G
+|root||root|localhost|TRIGGER|G
+|root||root|localhost|UPDATE|G
+|root||root|localhost|grant option|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <DefaultCasing>mixed/mixed</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="spring_hiber">
+      <Current>1</Current>
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="mysql">
+      <Collation>latin1_swedish_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="performance_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <user id="6" parent="1" name="mysql.sys">
+      <Host>localhost</Host>
+    </user>
+    <user id="7" parent="1" name="root">
+      <Host>localhost</Host>
+    </user>
+    <table id="8" parent="2" name="Car">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="9" parent="2" name="hibernate_sequence">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="10" parent="2" name="users">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="11" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="8" name="model">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="13" parent="8" name="series">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="14" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="15" parent="9" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+    </column>
+    <column id="16" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="10" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="18" parent="10" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="19" parent="10" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="20" parent="10" name="car_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+    </column>
+    <index id="21" parent="10" name="FKhhpcps0or6nddhr80fq802jew">
+      <ColNames>car_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="22" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
